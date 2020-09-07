@@ -11,6 +11,10 @@ app = express()
 app.use(express.json())
 app.use(cors())
 
+app.use("/", routes)
+
+app.use("/login", authenticate)
+
 
 //production
 if(process.env.NODE_ENV==="production")
@@ -22,12 +26,6 @@ app.get('*', (req, res) => {
   }
 
 
-
-
-app.use("/", routes)
-
-
-app.use("/login", authenticate)
 
 const PORT= process.env.PORT || 5000
 
