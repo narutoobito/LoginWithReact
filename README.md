@@ -1,6 +1,6 @@
 **LOGINGINREACT**
 
-When the project gets deployed the link will show up here.
+Link to project - https://narutoobito-loginreact.herokuapp.com/
 
 This project is a safe login authentication webapp. Security is fulfilled by serverside using hashing the password and logging the signed up users in. The logged in user can see all user and their password. Database contains some default users.
 
