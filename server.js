@@ -10,6 +10,20 @@ app = express()
 
 app.use(express.json())
 app.use(cors())
+
+
+//production
+if(process.env.NODE_ENV==="production")
+{
+app.use(express.static('frontend/build'))
+app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
+  })
+  }
+
+
+
+
 app.use("/", routes)
 
 
@@ -31,18 +45,10 @@ connection.once('open',()=>console.log("connected to mongodb"))
 app.listen(PORT, ()=> console.log(`listening at port ${PORT}`))
 
 
-app.get("/",(req,res)=>{
-    res.send("hello")
-})
+//app.get("/",(req,res)=>{
+//    res.send("hello")
+//})
 
 
-//production
-if(process.env.NODE_ENV==="production")
-{
-app.use(express.static('frontend/build'))
-app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, 'frontend', 'build', 'index.html'));
-  })
-  }
 
 //mongoose.disconnect();
