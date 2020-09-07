@@ -50,8 +50,8 @@ componentWillReceiveProps(nextProps){
   <MuiThemeProvider>
     <div>
         <AppBar title="Signin" ></AppBar>
-        <TextField floatingLabelText="username" value={this.state.username} hintText="enter the username" onChange={this.handleInputChange("username")} />
-        <TextField floatingLabelText="password" value={this.state.password} hintText="enter the Password" onChange={this.handleInputChange("password")} />
+        <TextField floatingLabelText="username"  hintText="enter the username" onChange={this.handleInputChange("username")} />
+        <TextField floatingLabelText="password" type="password" hintText="enter the Password" onChange={this.handleInputChange("password")} />
         <Button primary="true" label="Submit" onClick={this.onSubmit}/>
 
          <h1>{this.state.message}</h1>
