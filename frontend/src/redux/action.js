@@ -5,7 +5,7 @@ export const LOGIN_REJECTED = 'LOGIN_REJECTED';
 
 export const getDetails = () => dispatch => {
     console.log("loading")
-  fetch('http://localhost:5000/read')
+  fetch('https://narutoobito-loginreact.herokuapp.com/read')
     .then(res => res.json())
     .then(data =>
       dispatch({
@@ -21,7 +21,7 @@ export const getDetails = () => dispatch => {
 
 export const login = postData => dispatch => {
    console.log("fetching")
-  fetch('http://localhost:5000/login', {
+  fetch('https://narutoobito-loginreact.herokuapp.com/login', {
     method: 'POST',
     headers: {
       'content-type': 'application/json'
