@@ -5,6 +5,7 @@ This project is made with express,react,redux,redux-thug and material-ui
 **Running**
 
 For running this project to your computer first pull this repo and the cd to it then **run** `npm install` in your shell.
+and then `cd frontend` then again `npm install`
 
 **NOTE--You need two shells open , one for react and one for express**
 
@@ -16,3 +17,4 @@ For running react-app to your browser `cd frontend` and then `npm start`it will 
 **ABOUT PROJECT**
 
 This is a simple login project with authentication in server side and used bcrypt to hash the password but the bcrypt.
+It hashes the password and uses it to login the user 
