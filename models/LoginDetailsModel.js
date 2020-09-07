@@ -5,7 +5,7 @@ const schema= mongoose.Schema
 const loginSchema = schema({
     username: { type: String, required: true },
     password: { type: String, required: true, trim: true },
-    hashed: {type: String,}
+    hash: {type: String,}
 },
 {
 timestamps: true,

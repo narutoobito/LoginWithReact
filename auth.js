@@ -10,7 +10,7 @@ authenticate=(req,res,next)=>{
     model.findOne({username})
     .then(user=>{
         if(user){
-            bcrypt.compare(password, user.password)
+            bcrypt.compare(password, user.hash)
             .then(result=>{
                 if(result){
                     {
